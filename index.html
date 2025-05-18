@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yuvam Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .logo-gradient {
+        background: linear-gradient(to right, #facc15, #000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Popüler ürün resimleri */
+      .populer-urun-img {
+        cursor: pointer;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+      }
+      /* Hover'da hafif büyüme */
+      .populer-urun-img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-100 text-gray-900 relative">
+
+    <!-- HEADER -->
+    <header
+      class="bg-white shadow-md py-4 px-8 flex justify-between items-center fixed w-full z-20"
+    >
+      <h1 class="text-3xl font-bold logo-gradient">Yuvam Home</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-primary transition">Ana Sayfa</a>
+        <a href="urunler.html" class="hover:text-primary transition">Ürünler</a>
+        <a href="hakkimizda.html" class="hover:text-primary transition"
+          >Hakkımızda</a
+        >
+        <a href="iletisim.html" class="hover:text-primary transition">İletişim</a>
+      </nav>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div class="h-20"></div>
+
+    <!-- HERO -->
+    <section
+      class="relative bg-black text-white h-[500px] flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-50"
+        style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1950&q=80')"
+      ></div>
+      <div class="relative z-10 text-center px-4">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+          Modern Yaşam Alanları
+        </h2>
+        <p class="text-lg md:text-xl mb-6">
+          Ev dekorasyonunda zarafet ve konforun buluşma noktası.
+        </p>
+        <a
+          href="urunler.html"
+          class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition"
+          >Ürünleri Keşfet</a
+        >
+      </div>
+    </section>
+
+  <!-- POPÜLER ÜRÜNLER -->
+<section id="urunler" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold mb-12">Popüler Ürünler</h3>
+    <div
+      id="populer-urunler-grid"
+      class="grid grid-cols-1 md:grid-cols-3 gap-8 relative"
+    >
+      <div class="group cursor-pointer">
+        <img
+          src="koltuk.jpg"
+          alt="Modern Koltuk Takımı"
+          class="populer-urun-img rounded-lg shadow-lg aspect-[4/3] w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-115"
+        />
+        <p class="mt-3 text-lg font-semibold text-gray-800">
+          Modern Koltuk Takımı
+        </p>
+      </div>
+      <div class="group cursor-pointer">
+        <img
+          src="yatak.jpg"
+          alt="Yatak Odası Takımı"
+          class="populer-urun-img rounded-lg shadow-lg aspect-[4/3] w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-115"
+        />
+        <p class="mt-3 text-lg font-semibold text-gray-800">
+          Yatak Odası Takımı
+        </p>
+      </div>
+      <div class="group cursor-pointer">
+        <img
+          src="tv.jpg"
+          alt="Şık TV Ünitesi"
+          class="populer-urun-img rounded-lg shadow-lg aspect-[4/3] w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-115"
+        />
+        <p class="mt-3 text-lg font-semibold text-gray-800">Şık TV Ünitesi</p>
+      </div>
+      <div class="group cursor-pointer">
+        <img
+          src="ahşap.jpg"
+          alt="Ahşap Masa Takımı"
+          class="populer-urun-img rounded-lg shadow-lg aspect-[4/3] w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-115"
+        />
+        <p class="mt-3 text-lg font-semibold text-gray-800">Ahşap Masa Takımı</p>
+      </div>
+      <div class="group cursor-pointer">
+        <img
+          src="kitaplık.jpg"
+          alt="Minimalist Kitaplık"
+          class="populer-urun-img rounded-lg shadow-lg aspect-[4/3] w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-115"
+        />
+        <p class="mt-3 text-lg font-semibold text-gray-800">Minimalist Kitaplık</p>
+      </div>
+      <div class="group cursor-pointer">
+        <img
+          src="berjer1.jpeg"
+          alt="Konforlu Berjer"
+          class="populer-urun-img rounded-lg shadow-lg aspect-[4/3] w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-115"
+        />
+        <p class="mt-3 text-lg font-semibold text-gray-800">Konforlu Berjer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-8 mt-10">
+      <p>© 2025 Yuvam Home. Tüm hakları saklıdır.</p>
+    </footer>
+  </body>
+</html>
